@@ -1,0 +1,99 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "ignore": [
+      "node_modules",
+      "*.json",
+      ".angular"
+    ],
+    "indentStyle": "space",
+    "lineWidth": 80
+  },
+  "javascript": {
+    "globals": [
+      "describe",
+      "beforeEach",
+      "it",
+      "expect",
+      "test",
+      "beforeAll",
+      "afterEach",
+      "afterAll"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      "node_modules",
+      ".angular",
+      "tests",
+      "*.json"
+    ],
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "warn",
+        "useKeyWithClickEvents": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "error",
+        "noForEach": "error",
+        "noStaticOnlyClass": "error",
+        "noUselessEmptyExport": "error",
+        "noUselessFragments": "warn",
+        "noUselessThisAlias": "error",
+        "useSimpleNumberKeys": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noConstantCondition": "error",
+        "noNonoctalDecimalEscape": "error",
+        "noSelfAssign": "error",
+        "noUndeclaredVariables": "warn",
+        "noUnusedVariables": "warn"
+      },
+      "nursery": {
+        "noAccumulatingSpread": "error",
+        "noDuplicateJsonKeys": "error",
+        "noExcessiveComplexity": "off",
+        "noFallthroughSwitchClause": "error",
+        "noGlobalIsFinite": "error",
+        "noGlobalIsNan": "error",
+        "noVoid": "error",
+        "useArrowFunction": "warn",
+        "useExhaustiveDependencies": "off",
+        "useGroupedTypeImport": "error",
+        "useHookAtTopLevel": "error",
+        "useIsArray": "error"
+      },
+      "recommended": true,
+      "style": {
+        "noImplicitBoolean": "warn",
+        "noNegationElse": "error",
+        "noParameterProperties": "off",
+        "noShoutyConstants": "warn",
+        "useBlockStatements": "error",
+        "useExponentiationOperator": "error",
+        "useFragmentSyntax": "error",
+        "useLiteralEnumMembers": "error",
+        "useNamingConvention": {
+          "level": "off",
+          "options": {
+            "enumMemberCase": "CONSTANT_CASE",
+            "strictCase": true
+          }
+        },
+        "useShorthandArrayType": "error",
+        "useSingleCaseStatement": "error"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn",
+        "noControlCharactersInRegex": "error",
+        "noRedundantUseStrict": "warn",
+        "noUnsafeDeclarationMerging": "error",
+        "useGetterReturn": "error"
+      }
+    }
+  }
+}
