@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <li *ngFor="let item of items" (click)="onClick(item)" [class.clicked]="item.name === clickedItem?.name">
+      <button type="button">{{item.name}}</button>
+      <p *ngIf="item.name === clickedItem?.name">{{item.description}}</p>
+    </li>
+  </ul>
+</div>
